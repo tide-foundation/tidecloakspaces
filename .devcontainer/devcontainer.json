@@ -1,7 +1,8 @@
 {
     "name": "Tidecloak Product Demo",
     "image": "mcr.microsoft.com/devcontainers/javascript-node:18",
-    "postCreateCommand": "git clone https://github.com/tide-foundation/tidecloak-client-nextJS.git && cd tidecloak-client-nextJS && npm install && npm run dev &",
+    "postCreateCommand": "./.devcontainer/start.sh"
+,
     "customizations": {
       "vscode": {
         "extensions": [
