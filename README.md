@@ -1,4 +1,13 @@
-[![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://github.com/tide-foundation/tidespaces/generate)
+[![Clone for GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://github.com/tide-foundation/tidespaces/generate)
+
+----------------------------------------------------------
+## 🚀 Next Step: Run the Demo in Codespaces
+✅ Now that you've forked the repo, click below to launch your Codespace:
+
+[![Run in Codespaces](https://github.com/codespaces/badge.svg)](https://github.com/codespaces/new?repo=your-username/your-forked-repo&ref=main)
+
+_Replace `your-username/your-forked-repo` with your fork’s path._
+
 
 ## 🚀 Try Tidecloak Instantly
 
