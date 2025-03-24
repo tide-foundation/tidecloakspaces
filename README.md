@@ -1,13 +1,6 @@
 [![Clone for GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://github.com/tide-foundation/tidespaces/generate)
 
 ----------------------------------------------------------
-## 🚀 Next Step: Run the Demo in Codespaces
-✅ Now that you've forked the repo, click below to launch your Codespace:
-
-[![Run in Codespaces](https://github.com/codespaces/badge.svg)](https://github.com/codespaces/new?repo=your-username/your-forked-repo&ref=main)
-
-_Replace `your-username/your-forked-repo` with your fork’s path._
-
 
 ## 🚀 Try Tidecloak Instantly
 
@@ -22,8 +15,8 @@ Click the button above to **create your own copy** of this environment in GitHub
 ## ▶️ **After Forking, Run the Demo**
 Once your repo is created:
 1. Click the green **"Code"** button (top right)
-2. Select **"Open with Codespaces"**
-3. Click **"New codespace"**
+2. Select **"Codespaces"**
+3. Click **"Create Codespace in main"**
 4. Sit back — the environment will:
    - Clone the Tidecloak Next.js client
    - Install dependencies
