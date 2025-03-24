@@ -1,24 +1,27 @@
 {
-    "name": "Tidecloak Product Demo",
-    "image": "mcr.microsoft.com/devcontainers/javascript-node:18",
-    "postCreateCommand": "git clone https://github.com/tide-foundation/tidecloak-client-nextJS.git && cd tidecloak-client-nextJS && npm install",
-    "postStartCommand": "cd tidecloak-client-nextJS && npm run dev",
-    "customizations": {
-      "vscode": {
-        "extensions": ["dbaeumer.vscode-eslint", "esbenp.prettier-vscode"]
-      }
-    },
-    "forwardPorts": [3000],
-    "portsAttributes": {
-      "3000": {
-        "label": "Tidecloak Demo App",
-        "onAutoForward": "openPreview"
-      }
-    },
-    "features": {
-      "ghcr.io/devcontainers/features/node:1": {
-        "version": "18"
-      }
+  "name": "Tidecloak Product Demo",
+  "image": "mcr.microsoft.com/devcontainers/javascript-node:18",
+  "postCreateCommand": "git clone https://github.com/tide-foundation/tidecloak-client-nextJS.git && cd tidecloak-client-nextJS && npm install",
+  "postStartCommand": "cd tidecloak-client-nextJS && npm run dev",
+  "customizations": {
+    "vscode": {
+      "extensions": ["dbaeumer.vscode-eslint", "esbenp.prettier-vscode"]
     }
+  },
+  "forwardPorts": [3000],
+  "portsAttributes": {
+    "3000": {
+      "label": "Tidecloak Demo App",
+      "onAutoForward": "openPreview"
+    }
+  },
+  "features": {
+    "ghcr.io/devcontainers/features/node:1": {
+      "version": "18"
+    }
+  },
+  "scripts": {
+    "dev": "next dev",
+    "demo": "node scripts/run-demo.js"
   }
-  
+}
