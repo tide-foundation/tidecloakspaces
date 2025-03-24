@@ -1,14 +1,11 @@
 {
     "name": "Tidecloak Product Demo",
     "image": "mcr.microsoft.com/devcontainers/javascript-node:18",
-    "postCreateCommand": "./.devcontainer/start.sh"
-,
+    "postCreateCommand": "git clone https://github.com/tide-foundation/tidecloak-client-nextJS.git && cd tidecloak-client-nextJS && npm install",
+    "postStartCommand": "cd tidecloak-client-nextJS && npm run dev",
     "customizations": {
       "vscode": {
-        "extensions": [
-          "dbaeumer.vscode-eslint",
-          "esbenp.prettier-vscode"
-        ]
+        "extensions": ["dbaeumer.vscode-eslint", "esbenp.prettier-vscode"]
       }
     },
     "forwardPorts": [3000],
