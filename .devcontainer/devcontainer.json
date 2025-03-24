@@ -1,28 +1,23 @@
 {
-  "name": "Tidecloak Product Demo",
-  "image": "mcr.microsoft.com/devcontainers/javascript-node:18",
-  "postCreateCommand": "git clone https://github.com/tide-foundation/tidecloak-client-nextJS.git && cd tidecloak-client-nextJS && npm install",
-  "postStartCommand": "cd tidecloak-client-nextJS && npm install && npm run dev & cat <<EOF > tidecloak.json\n{\n  \"realm\": \"myrealm\",\n  \"auth-server-url\": \"https://login.dauth.me\",\n  \"ssl-required\": \"external\",\n  \"resource\": \"myclient\",\n  \"public-client\": true,\n  \"confidential-port\": 0,\n  \"jwk\": {\n    \"keys\": [\n      {\n        \"kid\": \"5RAAb_E0q0G-wJteeIO5g2c4vLiA92GjZvIiDaTMS_Q\",\n        \"kty\": \"OKP\",\n        \"alg\": \"EdDSA\",\n        \"use\": \"sig\",\n        \"crv\": \"Ed25519\",\n        \"x\": \"-dB_-CRt6hA4IdE4W8ZVbJMskzNW_kieepJAtvSLNgk\"\n      }\n    ]\n  },\n  \"vendorId\": \"3862029410583086150518559921681455873022176381236912793071474044609822829041\",\n  \"homeOrkUrl\": \"https://ork1.tideprotocol.com\"\n}\nEOF",
-
-  "customizations": {
-    "vscode": {
-      "extensions": ["dbaeumer.vscode-eslint", "esbenp.prettier-vscode"]
+    "name": "Tidecloak Demo DevContainer",
+    "image": "mcr.microsoft.com/devcontainers/javascript-node:18",
+    "postCreateCommand": "chmod +x .devcontainer/setup.sh && .devcontainer/setup.sh",
+    "customizations": {
+      "vscode": {
+        "extensions": ["dbaeumer.vscode-eslint", "esbenp.prettier-vscode"]
+      }
+    },
+    "forwardPorts": [3000],
+    "portsAttributes": {
+      "3000": {
+        "label": "Tidecloak Next.js App",
+        "onAutoForward": "openPreview"
+      }
+    },
+    "features": {
+      "ghcr.io/devcontainers/features/node:1": {
+        "version": "18"
+      }
     }
-  },
-  "forwardPorts": [3000],
-  "portsAttributes": {
-    "3000": {
-      "label": "Tidecloak Demo App",
-      "onAutoForward": "openPreview"
-    }
-  },
-  "features": {
-    "ghcr.io/devcontainers/features/node:1": {
-      "version": "18"
-    }
-  },
-  "scripts": {
-    "dev": "next dev",
-    "demo": "node scripts/run-demo.js"
   }
-}
+  
