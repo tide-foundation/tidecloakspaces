@@ -9,6 +9,7 @@
   },
   "forwardPorts": [3000, 8080],
   "postCreateCommand": "chmod +x .devcontainer/setup.sh && .devcontainer/setup.sh",
+  "postStartCommand": "cd tidecloak-client-nextJS && npm run dev",
   "customizations": {
     "vscode": {
       "extensions": [
@@ -28,3 +29,4 @@
     }
   }
 }
+
