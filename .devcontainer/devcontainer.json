@@ -1,23 +1,30 @@
 {
-    "name": "Tidecloak Demo DevContainer",
-    "image": "mcr.microsoft.com/devcontainers/javascript-node:18",
-    "postCreateCommand": "chmod +x .devcontainer/setup.sh && .devcontainer/setup.sh",
-    "customizations": {
-      "vscode": {
-        "extensions": ["dbaeumer.vscode-eslint", "esbenp.prettier-vscode"]
-      }
+  "name": "Tidecloak Docker-Enabled DevContainer",
+  "image": "mcr.microsoft.com/devcontainers/javascript-node:18",
+  "features": {
+    "ghcr.io/devcontainers/features/node:1": {
+      "version": "18"
     },
-    "forwardPorts": [3000],
-    "portsAttributes": {
-      "3000": {
-        "label": "Tidecloak Next.js App",
-        "onAutoForward": "openPreview"
-      }
+    "ghcr.io/devcontainers/features/docker-in-docker:1": {}
+  },
+  "forwardPorts": [3000, 8080],
+  "postCreateCommand": "chmod +x .devcontainer/setup.sh && .devcontainer/setup.sh",
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "dbaeumer.vscode-eslint",
+        "esbenp.prettier-vscode"
+      ]
+    }
+  },
+  "portsAttributes": {
+    "3000": {
+      "label": "Tidecloak Next.js App",
+      "onAutoForward": "openPreview"
     },
-    "features": {
-      "ghcr.io/devcontainers/features/node:1": {
-        "version": "18"
-      }
+    "8080": {
+      "label": "Tidecloak Docker Service",
+      "onAutoForward": "openPreview"
     }
   }
-  
+}
