@@ -5,9 +5,15 @@ Try the Tidecloak SDK and service instantly with **GitHub Codespaces** — no se
 ---
 
 ## ✅ **Launch the Environment**
-Click the button below to **fork and launch the full environment** in GitHub Codespaces:
+Click the button below to **fork**:
 
 [![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://github.com/tide-foundation/tidespaces/generate)
+
+## 🚀 After Forking: Launch the Codespace
+✅ Now that you've forked the repo, launch your Codespace:
+
+1. Go to **Code → Codespaces**
+2. Select **"Create codespace in main"** on the `main` branch
 
 ---
 
