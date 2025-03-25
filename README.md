@@ -1,32 +1,43 @@
-[![Clone for GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://github.com/tide-foundation/tidespaces/generate)
+# 🚀 Tidecloak DevRel Demo
 
-----------------------------------------------------------
-
-## 🚀 Try Tidecloak Instantly
-
-Click the button above to **create your own copy** of this environment in GitHub Codespaces!
-
-✅ No setup required  
-✅ App auto-runs at **http://localhost:3000**  
-✅ Preview opens automatically
+Try the Tidecloak SDK and service instantly with **GitHub Codespaces** — no setup required!
 
 ---
 
-## ▶️ **After Forking, Run the Demo**
-Once your repo is created:
-1. Click the green **"Code"** button (top right)
-2. Select **"Codespaces"**
-3. Click **"Create Codespace in main"**
-4. Sit back — the environment will:
-   - Clone the Tidecloak Next.js client
-   - Install dependencies
-   - Auto-start the app on port **3000**
+## ✅ **Launch the Environment**
+Click the button below to **fork and launch the full environment** in GitHub Codespaces:
 
-✅ **Done!** You’ll see the live preview of the app running.
+[![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://github.com/tide-foundation/tidespaces/generate)
 
 ---
 
-## ℹ️ **Troubleshooting**
-If the preview doesn't open:
-- Manually open **"Ports" tab** in Codespaces
-- Look for **port 3000** and click **"Open in Browser"**
+## ▶️ **What Happens Automatically**
+Once the Codespace launches, it will:
+- Clone the Tidecloak Next.js client app
+- Install dependencies
+- Create the `tidecloak.json` config
+- Pull and run the **Docker service** (`tideorg/tidecloak-dev:latest`) with environment variables
+- Start the Next.js app on port **3000**
+
+✅ **Ports auto-forward** — no manual setup needed!
+
+---
+
+## 🌐 **Access Your Running Services**
+| Service            | Description                      | Example URL (Codespace)                                         |
+|--------------------|----------------------------------|-----------------------------------------------------------------|
+| **Next.js App**    | SDK frontend demo                | `https://${CODESPACE_NAME}-3000.app.github.dev`                 |
+| **Docker Service** | Tidecloak Docker backend service | `https://${CODESPACE_NAME}-8080.app.github.dev`                 |
+
+✅ Preview automatically opens inside Codespaces.  
+✅ You can also view ports from the **"Ports" tab**.
+
+---
+
+## 📜 **Docker Service Info**
+The Docker container runs automatically:
+```bash
+docker run -d -p 8080:8080 \
+  -e KC_BOOTSTRAP_ADMIN_USERNAME=admin \
+  -e KC_BOOTSTRAP_ADMIN_PASSWORD=password \
+  tideorg/tidecloak-dev:latest
