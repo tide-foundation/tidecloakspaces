@@ -30,18 +30,21 @@ Once the Codespace launches, it will:
 ## 🛠 **Automated Setup Progress**
 Once your Codespace starts, the terminal will show progress:
 
-| Step | Description |
-|-----|------------|
-| 🚀 **[1/7]** | Cloning the Tidecloak Next.js client repo |
-| 📦 **[2/7]** | Installing Next.js project dependencies |
-| 🌐 **[3/7]** | Generating dynamic Codespace URLs for external access |
-| 🔄 **[4/7]** | Replacing `localhost:3000` in `test-realm.json` with your Codespace URL |
-| 📥 **[4/7a]** | Copying the updated `test-realm.json` into the Next.js repo root |
-| 🐳 **[5/7]** | Pulling and running the Tidecloak Docker container |
-| 🔐 **[5/7a]** | Fetching an admin token from the running Docker container |
-| 📤 **[6/7]** | Posting initial setup to the Tidecloak vendor endpoint |
-| 🛠 **[7/7]** | Generating the `tidecloak.json` config for the Next.js app |
+| Step       | Description                                                                                 |
+|----------- |---------------------------------------------------------------------------------------------|
+| 🚀 **[1/9]** | Cloning the Tidecloak Next.js client repo                                                   |
+| 📦 **[2/9]** | Installing Next.js project dependencies                                                      |
+| 🌐 **[3/9]** | Generating dynamic Codespace URLs for external access                                        |
+| 🔄 **[4/9]** | Replacing `localhost:3000` with your Codespace URL in `test-realm.json`                      |
+| 📥 **[4/9a]** | Copying updated `test-realm.json` into the Next.js repo root                                  |
+| 🐳 **[5/9]** | Pulling and running the Tidecloak Docker container                                           |
+| 🔐 **[6/9]** | Fetching the admin token from the running Docker container                                   |
+| 📤 **[7/9]** | Calling Tidecloak vendor API to set up initial resources                                      |
+| 🔎 **[8/9]** | Retrieving the internal Client UID for the `account` client                                   |
+| 📥 **[9/9]** | Fetching the Keycloak adapter config dynamically and writing it to `tidecloak.json`          |
 
+✅ Once setup completes, your Next.js app and Docker service are ready and running.
+✅ `tidecloak.json` contains the dynamic configuration fetched from the Tidecloak service.
 
 ---
 
@@ -49,17 +52,20 @@ Once your Codespace starts, the terminal will show progress:
 | Service            | Description                      | Example URL (Codespace)                                         |
 |--------------------|----------------------------------|-----------------------------------------------------------------|
 | **Next.js App**    | SDK frontend demo                | `https://${CODESPACE_NAME}-3000.app.github.dev`                 |
-| **Docker Service** | Tidecloak Docker backend service | `https://${CODESPACE_NAME}-8080.app.github.dev`                 |
+| **Docker Service** | Tidecloak backend service        | `https://${CODESPACE_NAME}-8080.app.github.dev`                 |
 
-✅ Preview automatically opens inside Codespaces.  
-✅ You can also view ports from the **"Ports" tab**.
+✅ Preview opens automatically or check the **Ports tab** in Codespaces.
 
 ---
 
 ## 📜 **Docker Service Info**
 The Docker container runs automatically:
 ```bash
-docker run -d -p 8080:8080 \
+docker run -d \
+  -v "$(pwd)":/opt/keycloak/data/h2 \
+  -v "$(pwd)/tidecloak-client-nextJS/test-realm.json":/opt/keycloak/data/import/test-realm.json \
+  --name tidecloak \
+  -p 8080:8080 \
   -e KC_BOOTSTRAP_ADMIN_USERNAME=admin \
   -e KC_BOOTSTRAP_ADMIN_PASSWORD=password \
   tideorg/tidecloak-dev:latest
