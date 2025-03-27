@@ -28,6 +28,12 @@ docker run -d \
   -e KC_BOOTSTRAP_ADMIN_PASSWORD=password \
   tideorg/tidecloak-dev:latest
 
+echo "⏳ Waiting for Keycloak to become ready..."
+until curl -s "${CODESPACE_URL_TC}/realms/master/.well-known/openid-configuration" > /dev/null; do
+  sleep 2
+  echo "⌛ Still waiting for Keycloak..."
+done
+
 echo "🔐 [6/9] Fetching admin token..."
 TOKEN=$(curl -s --data "username=admin&password=password&grant_type=password&client_id=admin-cli" \
   "${CODESPACE_URL_TC}/realms/master/protocol/openid-connect/token" | jq -r '.access_token')
