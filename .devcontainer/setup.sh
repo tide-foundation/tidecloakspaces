@@ -53,7 +53,7 @@ curl -s -X POST "${TIDECLOAK_LOCAL_URL}/admin/realms/nextjs-test/vendorResources
 
 echo "📥 [10/10] Fetching adapter config and writing to tidecloak.json..."
 CLIENT_RESULT=$(curl -s -X GET \
-  "${TIDECLOAK_LOCAL_URL}/admin/realms/nextjs-test/clients?clientId=account" \
+  "${TIDECLOAK_LOCAL_URL}/admin/realms/nextjs-test/clients?clientId=myclient" \
   -H "Authorization: Bearer $TOKEN")
 CLIENT_UID=$(echo "$CLIENT_RESULT" | jq -r '.[0].id')
 
