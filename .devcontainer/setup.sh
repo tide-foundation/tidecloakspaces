@@ -22,7 +22,7 @@ docker pull docker.io/tideorg/tidecloak-dev:latest
 docker run -d \
   --name tidecloak \
   -p 8080:8080 \
-  -e KC_HOSTNAME=${CODESPACE_URL_TC}
+  -e KC_HOSTNAME=${CODESPACE_URL_TC} \
   -e KC_BOOTSTRAP_ADMIN_USERNAME=admin \
   -e KC_BOOTSTRAP_ADMIN_PASSWORD=password \
   tideorg/tidecloak-dev:latest
