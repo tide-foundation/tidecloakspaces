@@ -28,23 +28,23 @@ Once the Codespace launches, it will:
 ✅ **Ports auto-forward** — no manual setup needed!
 
 ## 🛠 **Automated Setup Progress**
-Once your Codespace starts, the terminal will show progress:
+
+Once your Codespace launches, the terminal will show progress as the environment configures itself automatically:
 
 | Step       | Description                                                                                 |
-|----------- |---------------------------------------------------------------------------------------------|
-| 🚀 **[1/9]** | Cloning the Tidecloak Next.js client repo                                                   |
-| 📦 **[2/9]** | Installing Next.js project dependencies                                                      |
-| 🌐 **[3/9]** | Generating dynamic Codespace URLs for external access                                        |
-| 🔄 **[4/9]** | Replacing `localhost:3000` with your Codespace URL in `test-realm.json`                      |
-| 📥 **[4/9a]** | Copying updated `test-realm.json` into the Next.js repo root                                  |
-| 🐳 **[5/9]** | Pulling and running the Tidecloak Docker container                                           |
-| 🔐 **[6/9]** | Fetching the admin token from the running Docker container                                   |
-| 📤 **[7/9]** | Calling Tidecloak vendor API to set up initial resources                                      |
-| 🔎 **[8/9]** | Retrieving the internal Client UID for the `account` client                                   |
-| 📥 **[9/9]** | Fetching the Keycloak adapter config dynamically and writing it to `tidecloak.json`          |
+|------------|---------------------------------------------------------------------------------------------|
+| 🚀 **[1/9]** | Cloning the Tidecloak Next.js client repo                                                  |
+| 📦 **[2/9]** | Installing project dependencies for the frontend                                           |
+| 🌐 **[3/9]** | Building the dynamic Codespace URL for use in redirect and origin settings                 |
+| 🔄 **[4/9]** | Replacing `localhost:3000` with your live Codespace URL in the `test-realm.json` config    |
+| 🐳 **[5/9]** | Pulling and launching the Tidecloak Docker container on port `8080`                        |
+| ⏳ **[6/9]** | Waiting for Tidecloak to be fully ready                                                     |
+| 🔐 **[7/9]** | Fetching an admin token using the master realm                                             |
+| 🌍 **[8/9]** | Creating the `nextjs-test` realm via the Tidecloak admin API from `test-realm.json`        |
+| 📥 **[9/9]** | Fetching the dynamic OIDC adapter config and writing it to `tidecloak.json`                |
 
-✅ Once setup completes, your Next.js app and Docker service are ready and running.
-✅ `tidecloak.json` contains the dynamic configuration fetched from the Tidecloak service.
+✅ Once all steps complete, your Next.js app is fully configured and integrated with the running Tidecloak instance.
+
 
 ---
 
