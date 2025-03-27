@@ -23,12 +23,11 @@ docker run -d \
   --name tidecloak \
   -p 8080:8080 \
   -e KC_HOSTNAME=${CODESPACE_URL_TC} \
-  -e KC_HOSTNAME_ADMIN=http://localhost:8080 \
   -e KC_BOOTSTRAP_ADMIN_USERNAME=admin \
   -e KC_BOOTSTRAP_ADMIN_PASSWORD=password \
   tideorg/tidecloak-dev:latest
 
-TIDECLOAK_LOCAL_URL="http://localhost:8080"
+TIDECLOAK_LOCAL_URL=${CODESPACE_URL_TC}
 
 echo "⏳ [6/10] Waiting for Tidecloak to become ready..."
 until curl -s "${TIDECLOAK_LOCAL_URL}/realms/master/.well-known/openid-configuration" > /dev/null; do
