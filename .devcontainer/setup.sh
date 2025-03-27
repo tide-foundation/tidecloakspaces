@@ -20,7 +20,7 @@ echo "🐳 [5/9] Pulling and starting Tidecloak Docker container..."
 docker pull docker.io/tideorg/tidecloak-dev:latest
 docker run -d \
   -v "$(pwd)":/opt/tidecloak/data/h2 \
-  -v "$(pwd)/tidecloak-client-nextJS/test-realm.json":/opt/tidecloak/data/import/test-realm.json \
+  -v "$(pwd)tidecloak-client-nextJS/test-realm.json":/opt/tidecloak/data/import/test-realm.json \
   --name tidecloak \
   -p 8080:8080 \
   -e KC_BOOTSTRAP_ADMIN_USERNAME=admin \
