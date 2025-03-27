@@ -55,6 +55,15 @@ curl -X POST \
   -H "Authorization: Bearer $TOKEN"\
   -d "isIGAEnabled=true"  
 
+CLIENTREQUESTS=$(curl -s -X GET "${TIDECLOAK_LOCAL_URL}/admin/realms/nextjs-test/tide-admin/change-set/clients/requests" \
+  -H "Authorization: Bearer $TOKEN")
+if ! echo "$CLIENTREQUESTS" | jq empty; then
+  echo "Error: The GET response is not valid JSON."
+  exit 1
+fi
+
+
+
 echo "📥 [10/10] Fetching adapter config and writing to tidecloak.json..."
 CLIENT_RESULT=$(curl -s -X GET \
   "${TIDECLOAK_LOCAL_URL}/admin/realms/nextjs-test/clients?clientId=myclient" \
