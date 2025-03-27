@@ -46,10 +46,14 @@ curl -s -X POST "${TIDECLOAK_LOCAL_URL}/admin/realms" \
   -H "Content-Type: application/json" \
   --data-binary @tidecloak-client-nextJS/test-realm.json
 
-echo "📤 [9/10] Calling setUpTideRealm vendor endpoint..."
+echo "📤 [9/10] Creating Tide IDP, getting License and enabling IGA"
 curl -s -X POST "${TIDECLOAK_LOCAL_URL}/admin/realms/nextjs-test/vendorResources/setUpTideRealm" \
   -H "Authorization: Bearer $TOKEN" \
   -d "email=email@tide.org"
+curl -X POST \
+  "${TIDECLOAK_LOCAL_URL}/admin/realms/nextjs-test/tideAdminResources/toggle-iga" \
+  -H "Authorization: Bearer $TOKEN"\
+  -d "isIGAEnabled=true"  
 
 echo "📥 [10/10] Fetching adapter config and writing to tidecloak.json..."
 CLIENT_RESULT=$(curl -s -X GET \

@@ -41,7 +41,7 @@ Once your Codespace launches, the terminal will show progress as the environment
 | ⏳ **[6/10]** | Waiting for Tidecloak to be fully ready (via health check)                                      |
 | 🔐 **[7/10]** | Fetching the initial admin token via the master realm                                           |
 | 🌍 **[8/10]** | Importing the `nextjs-test` realm dynamically via the Tidecloak Admin API                       |
-| 📤 **[9/10]** | Triggering Tidecloak’s `setUpTideRealm` vendor endpoint (email provisioning or setup task)      |
+| 📤 **[9/10]** | Creating Tide IDP, getting License and enabling IGA"      |
 | 📥 **[10/10]** | Fetching the OIDC adapter config for the `account` client and writing it to `tidecloak.json`   |
 
 ✅ After this process completes, your frontend and backend services are fully configured and ready to use.

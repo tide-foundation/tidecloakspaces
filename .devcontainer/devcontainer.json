@@ -16,7 +16,7 @@
   },
   "8080": {
     "label": "Tidecloak Server",
-    "onAutoForward": "openPreview",
+    "onAutoForward": "openBrowser",
     "visibility": "public"
   }
   },

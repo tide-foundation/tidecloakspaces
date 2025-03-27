@@ -2,7 +2,7 @@
     "realm": "nextjs-test",
     "enabled": true,
     "sslRequired": "external",
-    "registrationAllowed": false,
+    "registrationAllowed": true,
     "duplicateEmailsAllowed": true,
     "roles": {
       "realm": [
