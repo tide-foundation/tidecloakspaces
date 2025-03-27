@@ -41,6 +41,7 @@
         "clientId": "myclient",
         "enabled": true,
         "redirectUris": [
+          "http://localhost:3000/*",
           "http://localhost:3000/silent-check-sso.html",
           "http://localhost:3000/auth/redirect"
         ],
