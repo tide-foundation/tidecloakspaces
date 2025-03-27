@@ -49,7 +49,7 @@ curl -s -X POST "${TIDECLOAK_LOCAL_URL}/admin/realms" \
 echo "📤 [9/10] Calling setUpTideRealm vendor endpoint..."
 curl -s -X POST "${TIDECLOAK_LOCAL_URL}/admin/realms/nextjs-test/vendorResources/setUpTideRealm" \
   -H "Authorization: Bearer $TOKEN" \
-  -d "email=email@example.com"
+  -d "email=email@tide.org"
 
 echo "📥 [10/10] Fetching adapter config and writing to tidecloak.json..."
 CLIENT_RESULT=$(curl -s -X GET \

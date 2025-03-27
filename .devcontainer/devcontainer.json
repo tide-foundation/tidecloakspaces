@@ -8,6 +8,18 @@
     "ghcr.io/devcontainers/features/docker-in-docker:1": {}
   },
   "forwardPorts": [3000, 8080],
+  "portsAttributes": {
+  "3000": {
+    "label": "Next.js App",
+    "onAutoForward": "openPreview",
+    "visibility": "private"
+  },
+  "8080": {
+    "label": "Tidecloak Server",
+    "onAutoForward": "openPreview",
+    "visibility": "public"
+  }
+  },
   "postCreateCommand": "chmod +x .devcontainer/setup.sh && .devcontainer/setup.sh",
   "postStartCommand": "cd tidecloak-client-nextJS && npm run dev",
   "customizations": {
@@ -17,16 +29,5 @@
         "esbenp.prettier-vscode"
       ]
     }
-  },
-  "portsAttributes": {
-    "3000": {
-      "label": "Tidecloak Next.js App",
-      "onAutoForward": "openPreview"
-    },
-    "8080": {
-      "label": "Tidecloak Docker Service",
-      "onAutoForward": "openPreview"
-    }
   }
 }
-
