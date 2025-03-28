@@ -5,11 +5,13 @@ Try the Tidecloak SDK and service instantly with **GitHub Codespaces** — no se
 ---
 
 ## ✅ **Launch the Environment**
+
 Click the button below to **fork**:
 
 [![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://github.com/tide-foundation/tidespaces/generate)
 
 ## 🚀 After Forking: Launch the Codespace
+
 ✅ Now that you've forked the repo, launch your Codespace:
 
 1. Go to **Code → Codespaces**
@@ -18,7 +20,9 @@ Click the button below to **fork**:
 ---
 
 ## ▶️ **What Happens Automatically**
+
 Once the Codespace launches, it will:
+
 - Clone the Tidecloak Next.js client app
 - Install dependencies
 - Create the `tidecloak.json` config
@@ -29,45 +33,35 @@ Once the Codespace launches, it will:
 
 ## 🛠 **Automated Setup Progress**
 
-Once your Codespace launches, the terminal will show progress as the environment configures itself automatically:
 
-| Step        | Description                                                                                      |
-|-------------|--------------------------------------------------------------------------------------------------|
-| 🚀 **[1/10]** | Cloning the Tidecloak Next.js client repo                                                       |
-| 📦 **[2/10]** | Installing project dependencies for the frontend                                                |
-| 🌐 **[3/10]** | Building the dynamic Codespace URL for redirect and CORS configuration                          |
-| 🔄 **[4/10]** | Replacing `localhost:3000` with your live Codespace URL in `test-realm.json`                    |
-| 🐳 **[5/10]** | Pulling and launching the Tidecloak Docker container on port `8080`                             |
-| ⏳ **[6/10]** | Waiting for Tidecloak to be fully ready (via health check)                                      |
-| 🔐 **[7/10]** | Fetching the initial admin token via the master realm                                           |
-| 🌍 **[8/10]** | Importing the `nextjs-test` realm dynamically via the Tidecloak Admin API                       |
-| 📤 **[9/10]** | Creating Tide IDP, getting License and enabling IGA"      |
-| 📥 **[10/10]** | Fetching the OIDC adapter config for the `account` client and writing it to `tidecloak.json`   |
+| Step                | Description                                                                     |
+| ------------------- | ------------------------------------------------------------------------------- |
+| 🔧**[0/13]**  | Installing required system libraries (e.g. OpenSSL)                             |
+| 🚀**[1/13]**  | Cloning the Tidecloak Next.js client repo                                       |
+| 📦**[2/13]**  | Installing frontend dependencies with `npm install`                           |
+| 🌐**[3/13]**  | Generating the dynamic Codespace URL for proper redirect and CORS handling      |
+| 🔄**[4/13]**  | Replacing `localhost:3000`with your live Codespace URL in `test-realm.json` |
+| 🐳**[5/13]**  | Pulling and launching the Tidecloak Docker container                            |
+| ⏳**[6/13]**  | Waiting for the Tidecloak service to become responsive                          |
+| 🔐**[7/13]**  | Fetching an admin token using the master realm                                  |
+| 🌍**[8/13]**  | Creating the `nextjs-test`realm using the Tidecloak Admin REST API            |
+| 🛠️**[9/13]**      | Running vendor setup (`setUpTideRealm`) and enabling IGA                      |
+| ✅**[10/13]** | Approving and committing all pending client change sets                         |
+| 👤**[11/13]** | Creating a test user in the newly created realm                                 |
+| 📥**[12/13]** | Fetching the OIDC adapter config and saving it to `tidecloak.json`            |
+| 🎉**[13/13]** | Setup complete — Next.js app is now fully integrated with Tidecloak            |
 
-✅ After this process completes, your frontend and backend services are fully configured and ready to use.
-
-
+✅ Your Next.js frontend and the running Tidecloak service are now ready for testing and development.
 
 ---
 
 ## 🌐 **Access Your Running Services**
-| Service            | Description                      | Example URL (Codespace)                                         |
-|--------------------|----------------------------------|-----------------------------------------------------------------|
-| **Next.js App**    | SDK frontend demo                | `https://${CODESPACE_NAME}-3000.app.github.dev`                 |
-| **Docker Service** | Tidecloak backend service        | `https://${CODESPACE_NAME}-8080.app.github.dev`                 |
+
+| Service                  | Description               | Example URL (Codespace)                           |
+| ------------------------ | ------------------------- | ------------------------------------------------- |
+| **Next.js App**    | SDK frontend demo         | `https://${CODESPACE_NAME}-3000.app.github.dev` |
+| **Docker Service** | Tidecloak backend service | `https://${CODESPACE_NAME}-8080.app.github.dev` |
 
 ✅ Preview opens automatically or check the **Ports tab** in Codespaces.
 
 ---
-
-## 📜 **Docker Service Info**
-The Docker container runs automatically:
-```bash
-docker run -d \
-  -v "$(pwd)":/opt/keycloak/data/h2 \
-  -v "$(pwd)/tidecloak-client-nextJS/test-realm.json":/opt/keycloak/data/import/test-realm.json \
-  --name tidecloak \
-  -p 8080:8080 \
-  -e KC_BOOTSTRAP_ADMIN_USERNAME=admin \
-  -e KC_BOOTSTRAP_ADMIN_PASSWORD=password \
-  tideorg/tidecloak-dev:latest
