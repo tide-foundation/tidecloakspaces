@@ -65,3 +65,6 @@ Once the Codespace launches, it will:
 ✅ Preview opens automatically or check the **Ports tab** in Codespaces.
 
 ---
+**IMPORTANT: Make port 8080 public"**
+Go to the Ports tab in Codespaces, find port 8080, and right-click → 'Change port visibility' → 'Public'"
+
