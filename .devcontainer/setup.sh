@@ -105,10 +105,10 @@ response=$(curl -s -X POST "${TIDECLOAK_LOCAL_URL}/admin/realms/${USER_REALM}/us
     },
     "requiredActions": [],
     "emailVerified": false,
-    "username": "test",
-    "email": "sassdfsdfh2a@tide.org",
+    "username": "testuser",
+    "email": "testuser@tidecloak.com",
     "firstName": "test",
-    "lastName": "le",
+    "lastName": "user",
     "groups": [],
     "enabled": true
   }')
