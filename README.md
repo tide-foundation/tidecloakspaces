@@ -29,10 +29,23 @@ Once the Codespace launches, it will:
 - Pull and run the **Docker service** (`tideorg/tidecloak-dev:latest`) with environment variables
 - Start the Next.js app on port **3000**
 
+
+**IMPORTANT: Make port 8080 public"** to access the Tidecloak Admin UI
+  Go to the Ports tab in Codespaces, find port 8080, and right-click → 'Change port visibility' → 'Public'"
+
 ✅ **Ports auto-forward** — no manual setup needed!
+---
+
+## 🌐 **Access Your Running Services**
+
+| Service                  | Description               | Example URL (Codespace)                           |
+| ------------------------ | ------------------------- | ------------------------------------------------- |
+| **Next.js App**    | SDK frontend demo         | `https://${CODESPACE_NAME}-3000.app.github.dev` |
+| **Docker Service** | Tidecloak backend service | `https://${CODESPACE_NAME}-8080.app.github.dev` |
+
+✅ Preview opens automatically or check the **Ports tab** in Codespaces.
 
 ## 🛠 **Automated Setup Progress**
-
 
 | Step                | Description                                                                     |
 | ------------------- | ------------------------------------------------------------------------------- |
@@ -52,19 +65,4 @@ Once the Codespace launches, it will:
 | 🎉**[13/13]** | Setup complete — Next.js app is now fully integrated with Tidecloak            |
 
 ✅ Your Next.js frontend and the running Tidecloak service are now ready for testing and development.
-
 ---
-
-## 🌐 **Access Your Running Services**
-
-| Service                  | Description               | Example URL (Codespace)                           |
-| ------------------------ | ------------------------- | ------------------------------------------------- |
-| **Next.js App**    | SDK frontend demo         | `https://${CODESPACE_NAME}-3000.app.github.dev` |
-| **Docker Service** | Tidecloak backend service | `https://${CODESPACE_NAME}-8080.app.github.dev` |
-
-✅ Preview opens automatically or check the **Ports tab** in Codespaces.
-
----
-**IMPORTANT: Make port 8080 public"**
-Go to the Ports tab in Codespaces, find port 8080, and right-click → 'Change port visibility' → 'Public'"
-
