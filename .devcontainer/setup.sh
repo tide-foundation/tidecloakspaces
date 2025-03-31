@@ -19,8 +19,8 @@ CODESPACE_URL_TC="https://${CODESPACE_NAME}-8080.app.github.dev"
 TIDECLOAK_LOCAL_URL="http://localhost:8080"
 
 echo "🔄 [4/13] Updating test-realm.json with Codespace URL..."
-sed -i "s|http://localhost:3000|${CODESPACE_URL_NEXT}|g" .devcontainer/test-realm.json
 cp .devcontainer/test-realm.json tidecloak-client-nextJS/test-realm.json
+sed -i "s|http://localhost:3000|${CODESPACE_URL_NEXT}|g" tidecloak-client-nextJS/test-realm.json
 
 echo "🐳 [5/13] Pulling and starting Tidecloak container..."
 docker pull docker.io/tideorg/tidecloak-dev:latest
