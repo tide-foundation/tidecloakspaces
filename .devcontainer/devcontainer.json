@@ -9,18 +9,18 @@
   },
   "forwardPorts": [3000, 8080],
   "portsAttributes": {
-  "3000": {
-    "label": "Next.js App",
-    "onAutoForward": "openPreview",
-    "visibility": "private"
+    "3000": {
+      "label": "Next.js App",
+      "onAutoForward": "openPreview",
+      "visibility": "private"
+    },
+    "8080": {
+      "label": "Tidecloak Server",
+      "onAutoForward": "openBrowser",
+      "visibility": "public"
+    }
   },
-  "8080": {
-    "label": "Tidecloak Server",
-    "onAutoForward": "openBrowser",
-    "visibility": "public"
-  }
-  },
-  "postCreateCommand": "chmod +x .devcontainer/setup.sh && .devcontainer/setup.sh | tee setup.log",
+  "postCreateCommand": "chmod +x .devcontainer/setup.sh && .devcontainer/setup.sh | tee setup.log & tail -f setup.log",
   "postStartCommand": "cd tidecloak-client-nextJS && npm run dev",
   "customizations": {
     "vscode": {
@@ -29,5 +29,6 @@
         "esbenp.prettier-vscode"
       ]
     }
-  }
+  },
+  "remoteUser": "vscode"
 }

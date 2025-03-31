@@ -5,6 +5,9 @@ echo "🔧 [0/13] Installing required dependencies (OpenSSL)..."
 sudo apt-get update
 sudo apt-get install -y libssl-dev
 
+echo "🧾 Opening setup.log in VS Code terminal for visibility..."
+code -r setup.log
+
 echo "🚀 [1/13] Cloning the Tidecloak Next.js client..."
 git clone https://github.com/tide-foundation/tidecloak-client-nextJS.git
 
@@ -126,3 +129,7 @@ ADAPTER_RESULT=$(curl -s -X GET \
 echo "$ADAPTER_RESULT" > tidecloak-client-nextJS/tidecloak.json
 
 echo "🎉 [13/13] Setup complete! Next.js app is ready with the dynamic Tidecloak config."
+
+echo ""
+echo "✅ Setup complete. You can close this terminal or continue below."
+echo ""
