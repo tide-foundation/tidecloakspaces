@@ -17,25 +17,25 @@ Click the button below to **fork**:
 1. Go to **Code → Codespaces**
 2. Select **"Create codespace in main"** on the `main` branch
 
+**Grab a coffee/drink as this process can take around 7-10 mins**
+
 ---
 
 ## ▶️ **What Happens Automatically**
 
 Once the Codespace launches, it will:
 
-- Clone the Tidecloak Next.js client app.  Full repos can be found [here]((https://github.com/tide-foundation/tidecloak-client-nextJS) 
+- Clone the Tidecloak Next.js client app.  Full repos can be found [here]((https://github.com/tide-foundation/tidecloak-client-nextJS)
 - Install dependencies
 - Create the `tidecloak.json` config
 - Pull and run the **Docker service** (`tideorg/tidecloak-dev:latest`) with environment variables
 - Start the Next.js app on port **3000**
-
 
 ✅ **Ports auto-forward** — no manual setup needed!
 ------------------------------------------------
 
 **IMPORTANT: Make port 8080 public"** to access the Tidecloak Admin UI
   Go to the Ports tab in Codespaces, find port 8080, and right-click → 'Change port visibility' → 'Public'"
-
 
 ## 🌐 **Access Your Running Services**
 
