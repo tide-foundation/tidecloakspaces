@@ -39,7 +39,7 @@ Once the Codespace launches, it will:
 **IMPORTANT: Make port 8080 public"** to access the Tidecloak Admin UI
   Go to the Ports tab in Codespaces, find port 8080, and right-click → 'Change port visibility' → 'Public'"
 
-![1743562018077](image/README/1743562018077.gif)
+    ![1743562018077](image/README/1743562018077.gif)
 
 ## 🌐 **Access Your Running Services**
 
@@ -49,6 +49,10 @@ Once the Codespace launches, it will:
 | **Docker Service** | Tidecloak backend service | `https://${CODESPACE_NAME}-8080.app.github.dev` |
 
 ✅ Preview opens automatically or check the **Ports tab** in Codespaces.
+
+You will get the Github warning.  Just press continue to move on.  
+
+![1743562446996](image/README/1743562446996.png)
 
 ## 🛠 **Automated Setup Progress**
 
