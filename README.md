@@ -17,6 +17,8 @@ Click the button below to **fork**:
 1. Go to **Code → Codespaces**
 2. Select **"Create codespace in main"** on the `main` branch
 
+   ![1743561513547](image/README/1743561513547.gif)
+
 **Grab a coffee/drink as this process can take around 7-10 mins**
 
 ---
@@ -36,6 +38,8 @@ Once the Codespace launches, it will:
 
 **IMPORTANT: Make port 8080 public"** to access the Tidecloak Admin UI
   Go to the Ports tab in Codespaces, find port 8080, and right-click → 'Change port visibility' → 'Public'"
+
+![1743562018077](image/README/1743562018077.gif)
 
 ## 🌐 **Access Your Running Services**
 
