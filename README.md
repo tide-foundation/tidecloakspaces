@@ -73,5 +73,5 @@ You will get the Github warning.  Just press continue to move on.
 | 📥**[12/13]** | Fetching the OIDC adapter config and saving it to `tidecloak.json`            |
 | 🎉**[13/13]** | Setup complete — Next.js app is now fully integrated with Tidecloak            |
 
-✅ Your Next.js frontend and the running Tidecloak service are now ready for testing and development.
+Your Next.js frontend and the running Tidecloak service are now ready for testing and development. ✅
 -----------------------------------------------------------------------------------------------------
