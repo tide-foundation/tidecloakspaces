@@ -5,8 +5,6 @@ echo "🔧 [0/13] Installing required dependencies (OpenSSL)..."
 sudo apt-get update
 sudo apt-get install -y libssl-dev
 
-echo "🧾 Opening setup.log in VS Code terminal for visibility..."
-code -r setup.log
 
 echo "🚀 [1/13] Cloning the Tidecloak Next.js client..."
 git clone https://github.com/tide-foundation/tidecloak-client-nextJS.git
