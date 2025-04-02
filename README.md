@@ -1,16 +1,16 @@
-# 🚀 Tidecloak DevRel Demo
+# Tidecloak Developer Demo 🚀
 
 Try the Tidecloak SDK and service instantly with **GitHub Codespaces** — no setup required!
 
 ---
 
-## ✅ **Launch the Environment**
+## **Launch the Environment** ✅
 
 Click the button below to **fork**:
 
 [![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://github.com/tide-foundation/tidespaces/generate)
 
-## 🚀 After Forking: Launch the Codespace
+## After Forking: Launch the Codespace 🚀
 
 ✅ Now that you've forked the repo, launch your Codespace:
 
@@ -19,11 +19,11 @@ Click the button below to **fork**:
 
    ![1743561513547](image/README/1743561513547.gif)
 
-**Grab a coffee/drink as this process can take around 7-10 mins**
+**Grab a coffee as this process can take around 7 mins**
 
 ---
 
-## ▶️ **What Happens Automatically**
+## **What Happens Automatically** ▶️
 
 Once the Codespace launches, it will:
 
@@ -33,7 +33,7 @@ Once the Codespace launches, it will:
 - Pull and run the **Docker service** (`tideorg/tidecloak-dev:latest`) with environment variables
 - Start the Next.js app on port **3000**
 
-✅ **Ports auto-forward** — no manual setup needed!
+**Ports auto-forward** — no manual setup needed! ✅
 ------------------------------------------------
 
 **IMPORTANT: Make port 8080 public"** to access the Tidecloak Admin UI
@@ -41,20 +41,20 @@ Once the Codespace launches, it will:
 
   ![1743562018077](image/README/1743562018077.gif)
 
-## 🌐 **Access Your Running Services**
+## **Access Your Running Services** 🌐
 
 | Service                  | Description               | Example URL (Codespace)                           |
 | ------------------------ | ------------------------- | ------------------------------------------------- |
 | **Next.js App**    | SDK frontend demo         | `https://${CODESPACE_NAME}-3000.app.github.dev` |
 | **Docker Service** | Tidecloak backend service | `https://${CODESPACE_NAME}-8080.app.github.dev` |
 
-✅ Preview opens automatically or check the **Ports tab** in Codespaces.
+Preview opens automatically or check the **Ports tab** in Codespaces. ✅
 
 You will get the Github warning.  Just press continue to move on.  
 
 ![1743562446996](image/README/1743562446996.png)
 
-## 🛠 **Automated Setup Progress**
+## **Automated Setup Progress** 🛠
 
 | Step                | Description                                                                     |
 | ------------------- | ------------------------------------------------------------------------------- |
