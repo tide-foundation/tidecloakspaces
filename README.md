@@ -39,7 +39,7 @@ Once the Codespace launches, it will:
 **IMPORTANT: Make port 8080 public"** to access the Tidecloak Admin UI
   Go to the Ports tab in Codespaces, find port 8080, and right-click → 'Change port visibility' → 'Public'"
 
-    ![1743562018077](image/README/1743562018077.gif)
+  ![1743562018077](image/README/1743562018077.gif)
 
 ## 🌐 **Access Your Running Services**
 
