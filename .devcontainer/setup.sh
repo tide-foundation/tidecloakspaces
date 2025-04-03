@@ -114,6 +114,21 @@ response=$(curl -s -X POST "${TIDECLOAK_LOCAL_URL}/admin/realms/${USER_REALM}/us
     "enabled": true
   }')
 
+userresponse=$(curl -s -X GET "${TIDECLOAK_LOCAL_URL}/admin/realms/nextjs-test/users?username=testuser" \
+  -H "Authorization: Bearer $TOKEN" \
+  -H "Content-Type: application/json")
+
+userId=$(echo "$userresponse" | jq -r '.[0].id')
+echo "$userId"
+
+# Provide different lifespan if needed
+invitelink=$(curl -s -X POST "${TIDECLOAK_LOCAL_URL}/admin/realms/nextjs-test/tideAdminResources/get-required-action-link?userId=$userId&lifespan=43200" \
+  -H "Authorization: Bearer $TOKEN" \
+  -H "Content-Type: application/json" \
+  -d '["link-tide-account-action"]')
+
+echo "$invitelink"
+
 echo "📥 [12/13] Fetching adapter config and writing to tidecloak.json..."
 CLIENT_RESULT=$(curl -s -X GET \
   "${TIDECLOAK_LOCAL_URL}/admin/realms/nextjs-test/clients?clientId=myclient" \
