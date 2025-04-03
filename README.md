@@ -1,6 +1,7 @@
 # TideCloak developer demo 🚀
 
-Build the most secure demo web app using TideCloak SDK instantly with GitHub Codespaces - no setup required!  
+Build the most secure demo web app using TideCloak SDK instantly with GitHub Codespaces - no setup required!
+
 The only prerequisit: a (free) github account!
 
 ---
@@ -11,11 +12,11 @@ Click the button below to **fork** your copy (C'mon, I said "fork!"):
 
 [![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://github.com/tide-foundation/tidespaces/generate)
 
-It will auto-populate the "Create a new repository" form - and you only need to give it a Repository name e.g. "mytidecloaktest" - and click "Create repository"
+It will auto-populate the **"Create a new repository"** form - and you only need to give it a Repository name e.g. "*mytidecloaktest*" - and click `Create repository`
 
 ## 2. Launch your Codespace 🚀
 
-✅ Now that you've forked the repo, launch the project in your Codespace to spin up a fully working Tide.js demo app secured by TideCloak - A bare bones app showing off TideCloak's core features, to remove your worry of breaches:
+✅ Now that you've forked the repo, launch the project in your Codespace to spin up a fully working Next.js demo app secured by TideCloak - A bare-bones web app showing off TideCloak's core features, to remove your worry of breaches:
 
 1. Go to **Code → Codespaces**
 2. Select **"Create codespace on main"** on the `main` branch
@@ -35,10 +36,12 @@ Feel free to grab a coffee, star this project, or read about the latest breach h
 ## **3. Have a play with the demo app** ▶️
 
 **a) Tiny manual adjustment needed!**
-IMPORTANT: For this to work, you must make port 8080 public to allow your app to access Tidecloak.
+
+> [!IMPORTANT]
+> For this to work, you must make port 8080 public to allow your app to access Tidecloak.
 _(Currently GitHub restricts us from automating this step, so you'll have to do it manually)_
 
-Go to the Ports tab in Codespaces, find port 8080, and right-click → 'Change port visibility' → 'Public'
+Go to the Ports tab in Codespaces, find port `Tidecloak Server (8080)`, and right-click → `Port visibility` → 'Public'
 
 ![how to makepublic](image/README/tidecloak_howto_makepublic.gif)
 
@@ -46,11 +49,16 @@ Go to the Ports tab in Codespaces, find port 8080, and right-click → 'Change p
 
 The Preview opens automatically, otherwise check the **Ports tab** in Codespaces for the **Forwarded addess** in the format of _https://${CODESPACE_NAME}-3000.app.github.dev_.
 
-**NOTICE:** When you click "Login" for the first time, you'll see the below Github warning. Just press continue to move on.
+You should see this:
 
 ![How to create codespace](image/README/tidecloak_howto_preview.jpg)
+
+> [!WARNING]
+> When you click `Login` for the first time, you'll see the below Github warning. Just press `Continue` to move on.
+
+<img src="image/README/1743562446996.png" alt="Codespaces warning" style="border: 2px solid #ccc; border-radius: 6px;" />
 
 **4. Accessing the TideCloak backend**
 ------------------------------------------------
 
-Then in the **Ports tab** click on the **Forwarded addess** in the format of _https://${CODESPACE_NAME}-8080.app.github.dev_. The default administrator credentials are admin / password.
+Then in the **Ports tab** click on the **Forwarded addess** in the format of _https://${CODESPACE_NAME}-8080.app.github.dev_. The default administrator credentials are `admin` / `password`.
