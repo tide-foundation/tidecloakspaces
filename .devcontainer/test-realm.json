@@ -1,5 +1,6 @@
 {
     "realm": "nextjs-test",
+    "accessTokenLifespan": 600,
     "enabled": true,
     "sslRequired": "external",
     "registrationAllowed": true,
