@@ -29,6 +29,8 @@ Your Next.js frontend secured by Tidecloak is now ready for testing. A few thing
 
 **a) Here's what you'll see**
 
+![How to create codespace](image/README/tidecloak_howto_preview.jpg)
+
 The Preview opens automatically, otherwise check the **Ports tab** in Codespaces for the **Forwarded addess** in the format of _https://${CODESPACE_NAME}-3000.app.github.dev_.
 
 **b) First time use warning**
