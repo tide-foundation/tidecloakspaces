@@ -45,7 +45,7 @@ Go to the Ports tab in Codespaces, find port `Tidecloak Server (8080)`, and righ
 
 ![how to makepublic](image/README/tidecloak_howto_makepublic.gif)
 
-**b) Your Next.js appd secured by Tidecloak is now ready for you to take for a spin**
+**b) Your Next.js app secured by Tidecloak is now ready for you to take for a spin**
 
 The Preview opens automatically, otherwise check the **Ports tab** in Codespaces for the **Forwarded addess** in the format of _https://${CODESPACE_NAME}-3000.app.github.dev_.
 
